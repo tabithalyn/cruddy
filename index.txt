@@ -1,0 +1,39 @@
+
+---! don't allow empty entries
+
+
+
+AddEmployee > AddPost
+EditEmployee > EditPost
+Employee > Post
+EmployeeForm > PostForm
+EmployeeList > PostList
+EmployeeModal > ReadPost
+IEmployee > IPost
+firstName, setFirstName > postTitle, setPostTitle
+lastName, setLastName > postBody, setPostBody
+email, setEmail > currentMood, setCurrentMood
+
+onFirstNameChangeHnd > onTitleChange
+onLastNameChangeHnd > onBodyChange
+onEmailNameChangeHnd > onMoodChange
+
+showModal, setShowModal > showPost, setShowPost
+viewEmployee > viewPost
+
+// CSS
+myModal > myPost
+modal > post
+modal-content > post-content
+
+add-employee-btn > add-post-button
+
+employeeList, setEmployeeList >
+_setEmployeeList > 
+
+onAddEmployeeClickHnd > onAddPost
+
+addEmployee > addPost
+deleteEmployee > deletePost
+editEmployeeData > deletePostData
+
