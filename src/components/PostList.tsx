@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { IPost } from './Post.type';
 import './PostList.style.css';
 import ReadPost from './ReadPost';
+import { Table, Row } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 type Props = {
   list: IPost[];
@@ -26,22 +28,16 @@ const PostList = (props:Props) => {
       <article>
         <h3 className="list-header">Post List</h3>
       </article>
-      <table>
-        <thead>
-        <tr>
-          <th>Title</th>
-          <th>Body</th>
-          <th>Current Mood</th>
-        </tr>
-        </thead>
+      <Table className="table d-flex p-2 align-items-stretch w-100 justify-content-center">
         <tbody>
         {list.map((post) => {
           return (
             <tr key={post.id}>
-              <td>{`${post.postTitle} ${post.postBody}`}</td>
-              <td>{post.currentMood}</td>
+            <td className="table-dark" scope="col">{post.postTitle}</td>
+            <td className="table-light" scope="col">{post.postBody}</td>
+            <td className="table-primary" scope="col">Current Mood: {post.currentMood}</td>
               <td>
-                <div>
+                <div className="text-center">
                   <input
                     type="button"
                     value="View"
@@ -63,7 +59,7 @@ const PostList = (props:Props) => {
           );
         })}
         </tbody>
-      </table>
+      </Table>
       {showPost && dataToShow !== null && (
         <ReadPost onClose={onCloseModal} data={dataToShow} />
       )}
