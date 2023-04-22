@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { IPost } from "./Post.type";
 import './ReadPost.style.css';
 

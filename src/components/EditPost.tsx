@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { useState } from 'react';
 import { IPost } from './Post.type';
 import './PostForm.style.css';
